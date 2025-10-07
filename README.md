@@ -16,7 +16,7 @@ Fokus: Scrum-grunder, user stories med **INVEST**, **Acceptance Criteria**, enke
 ## Snabblänkar till övningar
 - [01 – Bräda & Policies (DoD, PR-policy, WIP)](exercises/01-board-and-policies/README.md)
 - [02 – User stories (INVEST) + AC](exercises/02-user-stories-acceptance-criteria/README.md)
-- [03 – Estimering (Planning Poker) + Sprint 0](exercises/03-estimation-sprint0/README.md)
+- [03 – Estimering (Planning Poker) + Sprint 0](https://github.com/Folkuniversitetet-MU25/MU25-Versionshantering-och-strategier-med-Git-V1-Del-2_V2-Del-1-Agila-metoder-Trello/tree/main/exercises/%2003-estimation-sprint0)
 - [04 – PR-flöde (liten drill) + review + länka kort](exercises/04-pr-drill/README.md)
 - [05 – Demo & Retrospektiv (simulerad) → förbättringar](exercises/05-demo-retro/README.md)
 
