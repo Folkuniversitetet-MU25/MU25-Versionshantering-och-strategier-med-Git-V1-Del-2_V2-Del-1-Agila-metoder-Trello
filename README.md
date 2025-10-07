@@ -65,3 +65,9 @@ Som inloggad användare vill jag kunna logga ut så att min session avslutas och
 - Börja hellre **litet & klart** än stort & halvdant.
 - Sätt **WIP-gräns** i “Doing” för att undvika flaskhalsar.
 - [Grupparbete: Överenskommelse & Verktyg](https://github.com/lejonmanen/git-instruktion/blob/main/md/group.md)
+
+## Förtydliganden:
+- **Acceptance Criteria (AC):** Checklista som visar att just DEN HÄR storyn fungerar (testbart).
+- **Definition of Done (DoD):** Vår generella “klar”-standard (gäller alla stories).
+- **Definition of Ready (DoR):** Minimikrav innan en story får planeras (titel, syfte, AC, förstådd).
+ 
