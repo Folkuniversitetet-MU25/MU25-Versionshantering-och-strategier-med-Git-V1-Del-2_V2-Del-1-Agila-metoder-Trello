@@ -44,6 +44,23 @@ Fokus: Scrum-grunder, user stories med **INVEST**, **Acceptance Criteria**, enke
 ### INVEST (för stories)
 - **I**ndependent · **N**egotiable · **V**aluable · **E**stimable · **S**mall · **T**estable
 
+- I – Independent (Oberoende): Kan utvecklas testas utan att låsa annan story.
+- N – Negotiable (Förhandlingsbar): Inte detaljerad kravspec – går att diskutera.
+- V – Valuable (Värdeskapande): Ger faktisk nytta för användaren.
+- E – Estimable (Estimerbar): Teamet förstår den så pass att de kan sätta SP (Story Point).
+- S – Small (Liten): Ska få plats i en sprint (och gärna i en PR).
+- T – Testable (Testbar): Går att verifiera via AC.
+
+### Exempel (story + AC)
+- Story:
+Som inloggad användare vill jag kunna logga ut så att min session avslutas och ingen annan kan använda mitt konto.
+
+- AC:
+- [ ] “Logga ut”-knapp visas när jag är inloggad
+- [ ] Klick på “Logga ut” rensar session/token
+- [ ] Jag skickas till /login efter utlogg
+- [ ] Försök att öppna /profil efter utlogg leder till /login
+
 ## Tips
 - Börja hellre **litet & klart** än stort & halvdant.
 - Sätt **WIP-gräns** i “Doing” för att undvika flaskhalsar.
