@@ -20,26 +20,83 @@ Fokus: Scrum-grunder, user stories med **INVEST**, **Acceptance Criteria**, enke
 - [04 – PR-flöde (liten drill) + review + länka kort](exercises/04-pr-drill/README.md)
 - [05 – Demo & Retrospektiv (simulerad) → förbättringar](exercises/05-demo-retro/README.md)
 
-## Standards & Policys (kopiera till Trello som checklistor)
+# Policies & checklistor – Agila metoder + Trello
 
-### PR-policy (kursens enkla standard)
-- Små, fokuserade PR (≈ **≤ 250 rader diff**).
-- Rubrik: `type(scope): kort syfte` (ex. `feat(auth): add login form`).
-- Beskrivning: **varför** + **hur** + ev. **skärmdump**.
-- **Länka Trello-kort** (eller issue) i PR-texten.
-- **Minst 1 review** krävs innan merge.
-- Mergestrategi: `Squash & merge` är OK.
+Denna modul sätter gemensamma arbetssätt: **user stories (INVEST)**, **Acceptance Criteria (AC)**,
+**Definition of Ready (DoR)**, **Definition of Done (DoD)**, **WIP-gränser**, samt **commit/PR-policy**
+kopplad till Trello-kort.
 
-### Definition of Done (DoD)
-- Kod kompilerar/kör lokalt.
-- PR granskad & godkänd.
-- README/ev. ändrade instruktioner uppdaterade.
-- Trello-kort länkat i PR och **stängt** vid merge.
+> **Viktigt:** ÖVNINGAR i denna modul **lämnas inte in** i Azomo. Inlämning sker på grupp- och individ-examinationerna.
 
-### Definition of Ready (DoR) — mini
-- Story har **titel** och **kort syfte** (som <roll> vill jag… så att…).
-- **Acceptance Criteria** (checkboxlista) finns.
-- Story är **förstådd av teamet** och går att estimera.
+---
+
+## PR-policy (kursens enkla standard)
+
+**Syfte:** små, lättgranskade PR:er som är kopplade till planeringen och uppfyller AC.
+
+### Storlek & scope
+- Små, fokuserade PR (**≈ ≤ 250 rader diff**; exkl. genererade filer/lockfiles).
+- **1 PR = 1 user story/issue/bug** (undvik “blandpåse”).
+- Helst **≤ 5 filer** ändrade. Är det större → dela upp, eller motivera tydligt i PR.
+
+### Rubrik & struktur
+- **Rubrik:** `type(scope): kort syfte`  
+  Ex: `feat(auth): add login form`
+- **Tillåtna type:** `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `ci`
+- **Scope** är valfritt (t.ex. `auth`, `ui`, `api`).
+
+### Beskrivning (varför + hur)
+- **Varför:** vilket problem/nytta? (knyt till AC)
+- **Hur:** huvudgrepp/arkitektur/ev. trade-offs
+- **Skärmdump/GIF** om UI ändras
+
+### Koppling till planering
+- **Länka Trello-kort** (eller issue) **överst** i PR-beskrivningen
+- Lista **Acceptance Criteria** i PR och **bocka av** uppfyllda
+
+### Kvalitet före merge
+- Bygg/test **grönt** (om tillämpligt)
+- **Minst 1 review** (gärna 2)
+- Feedback adresserad (svara “done” eller pusha fix)
+
+### Merge-strategi
+- Rekommenderat: **Squash & merge** (ren historik)
+- **Force-push aldrig** till delade grenar (ok på *egna* feature-grenar vid behov)
+
+### Branch-namn
+- `feat/<kort-namn>`, `fix/<kort-namn>`, `docs/<kort-namn>`  
+  Ex: `feat/login-button`, `fix/typo-readme`
+
+---
+
+## Commit-meddelanden (enkelt)
+- Kort och i **imperativ**: “add”, “fix”, “update”
+- Ex: `feat: add welcome section to README`
+- **En commit = en logisk ändring**
+
+---
+
+## Definitioner (AC, DoR, DoD, INVEST, WIP)
+
+### Acceptance Criteria (AC)
+Testbar checklista som visar vad som måste vara sant för att storyn ska vara **klar**.
+Exempel för *Login*:
+- [ ] Inloggning fungerar med giltiga uppgifter  
+- [ ] Felmeddelande visas vid fel inlogg  
+- [ ] “Logga ut” tar bort session och leder till `/login`
+
+### Definition of Ready (DoR – mini)
+En story får planeras när:
+- **Titel & syfte** finns (`Som <roll> vill jag <mål> så att <nytta>`)
+- **AC** (checkboxlista) finns
+- Teamet **förstår** storyn och kan **estimera** den
+
+### Definition of Done (DoD – gäller alla PR)
+- Kod kompilerar/kör lokalt utan fel
+- Tester (om finns) passerar / manuell test beskriven
+- PR **granskad & godkänd** (minst 1 review)
+- README/ev. docs uppdaterad
+- Trello-kort/issue **länkat** och **stängt** vid merge
 
 ### INVEST (för stories)
 - **I**ndependent · **N**egotiable · **V**aluable · **E**stimable · **S**mall · **T**estable
@@ -50,6 +107,13 @@ Fokus: Scrum-grunder, user stories med **INVEST**, **Acceptance Criteria**, enke
 - E – Estimable (Estimerbar): Teamet förstår den så pass att de kan sätta SP (Story Point).
 - S – Small (Liten): Ska få plats i en sprint (och gärna i en PR).
 - T – Testable (Testbar): Går att verifiera via AC.
+
+### WIP – Work In Progress
+- **WIP-gräns i “Doing” = 2** (rekommenderat)
+- Syfte: minska multitasking och få saker **klara** innan nytt startas  
+  *Tumregel*: WIP ≈ teamstorlek − 1 (justera efter erfarenhet)
+
+---
 
 ### Exempel (story + AC)
 - Story:
@@ -64,10 +128,4 @@ Som inloggad användare vill jag kunna logga ut så att min session avslutas och
 ## Tips
 - Börja hellre **litet & klart** än stort & halvdant.
 - Sätt **WIP-gräns** i “Doing” för att undvika flaskhalsar.
-- [Grupparbete: Överenskommelse & Verktyg](https://github.com/lejonmanen/git-instruktion/blob/main/md/group.md)
-
-## Förtydliganden:
-- **Acceptance Criteria (AC):** Checklista som visar att just DEN HÄR storyn fungerar (testbart).
-- **Definition of Done (DoD):** Vår generella “klar”-standard (gäller alla stories).
-- **Definition of Ready (DoR):** Minimikrav innan en story får planeras (titel, syfte, AC, förstådd).
- 
+- [Grupparbete: Överenskommelse & Verktyg](https://github.com/lejonmanen/git-instruktion/blob/main/md/group.md
