@@ -47,4 +47,4 @@ Fokus: Scrum-grunder, user stories med **INVEST**, **Acceptance Criteria**, enke
 ## Tips
 - Börja hellre **litet & klart** än stort & halvdant.
 - Sätt **WIP-gräns** i “Doing” för att undvika flaskhalsar.
-- [Grupparbete: Överenskommelse & Verktyg]([exercises/01-board-and-policies/README.md](https://github.com/lejonmanen/git-instruktion/blob/main/md/group.md))
+- [Grupparbete: Överenskommelse & Verktyg](https://github.com/lejonmanen/git-instruktion/blob/main/md/group.md)
